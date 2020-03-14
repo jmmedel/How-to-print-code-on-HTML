@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>How to Add content in to A Div</h1>
+    <h2> Using JavaScript</h2>
+   
+    <xmp id="DivID"></xmp>
+    
+</body>
+   <script>
+    //document.getElementById("DivID").innerHTML='<div class="slide slick-slide"><a href="https://www.facebook.com/pstarheiwajima" target="_blank"><img src="images/images20200316/1a1.jpg" alt=""></a></div>';
+    var stringtemp = '<div class="slide slick-slide"><a href="https://www.facebook.com/pstarheiwajima" target="_blank"><img src="images/images20200316/1a1.jpg" alt=""></a></div>';
+    document.getElementById("DivID").innerHTML+=stringtemp;
+    
+    CreateDivElement(stringtemp);
+    CreateDivElement(stringtemp);
+    function CreateDivElement(data) {
+        var divElement = document.createElement("xmp");
+        divElement.id = "myDiv";
+        divElement.className = "myDivClass";
+        divElement.innerHTML = data;
+        document.body.appendChild(divElement);
+        
+    }
+
+
+   </script>
+
+</html>
